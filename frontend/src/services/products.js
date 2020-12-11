@@ -1,7 +1,7 @@
 import axios from 'axios'
 import isProd from '../utils/isProd'
 
-const baseURL = isProd ? '/api/products' : 'http://localhost:3000/api/product'
+const baseURL = isProd ? '/api/products' : '/api/product'
 
 const productsService = axios.create({ baseURL })
 

@@ -98,8 +98,7 @@ exports.googleCb = (req, res, next) => {
 
     req.login(user, err => {
       if (err) return res.status(500).json({ err })
-      return res.redirect(process.env.ENV === 'development' ?
-        'http://localhost:3001/' : '/')
+      return res.redirect('/')
     })
   })(req, res, next)
 }
